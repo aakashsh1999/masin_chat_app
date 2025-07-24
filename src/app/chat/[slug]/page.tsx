@@ -12,9 +12,13 @@ interface ChatPageProps {
   params: ChatPageParams;
 }
 
-export default function ChatPage({ params }: ChatPageProps) {
+export default async function ChatPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   // Access the dynamic segment using params.id
-  const chatId = params.id;
+  const chatId = params?.id;
 
   return <ChatInterface chatId={chatId} />;
 }
