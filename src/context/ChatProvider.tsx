@@ -24,7 +24,7 @@ interface ChatContextType {
   history: Chat[];
   createNewChat: () => Chat;
   updateChat: (chatId: string, updatedMessages: Message[]) => Chat | undefined;
-  deleteChat: (chatId: string) => Chat[];
+  deleteChat: (chatId: string) => any;
   getChatById: (chatId: string) => Chat | undefined;
   isLoaded: boolean;
 }
